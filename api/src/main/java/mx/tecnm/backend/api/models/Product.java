@@ -5,7 +5,10 @@ public class Product{
     public String codeBar;
     public double price;
 
-    public Product(String name, String codeBar, double price){
+    public Product(){
+    }
+
+    public Product(String name, String codeBar, double price) {
         this.name = name;
         this.codeBar = codeBar;
         this.price = price;

@@ -1,9 +1,10 @@
 package mx.tecnm.backend.api.controllers;
 
-import mx.tecnm.backend.api.modells.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import mx.tecnm.backend.api.models.Product;
 
 import java.util.List;
 
