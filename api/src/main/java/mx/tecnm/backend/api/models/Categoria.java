@@ -1,30 +1,45 @@
 package mx.tecnm.backend.api.models;
 
 public class Categoria {
-	private int id;
-	private String nombre;
+    private int id;
+    private String nombre;
+    private boolean activo; // Este es el campo nuevo para el "Borrado Lógico"
 
-	public Categoria() {
-	}
+    // Constructor vacío (necesario para Spring/RowMapper)
+    public Categoria() {
+    }
 
-	public Categoria(int id, String nombre) {
-		this.id = id;
-		this.nombre = nombre;
-	}
+    // Constructor con datos
+    public Categoria(int id, String nombre, boolean activo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.activo = activo;
+    }
 
-	public int getId() {
-		return id;
-	}
+    // --- GETTERS Y SETTERS (Solo una vez cada uno) ---
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Getter especial para booleanos (se suele llamar "isAlgo")
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
 }
